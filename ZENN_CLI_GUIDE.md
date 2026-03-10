@@ -108,13 +108,102 @@ chapters:
 - 無料本は `price: 0`
 - 有料本は Zenn 側の販売条件も考慮する
 
+## Zenn Markdown で重要な記法
+
+執筆時は Zenn 独自記法もよく使います。
+
+### 見出し
+
+- 見出しは `##` から始めるのが推奨
+- `#` は記事タイトルがあるため本文では多用しない
+
+### 画像
+
+```md
+![Altテキスト](https://画像のURL)
+![Altテキスト](https://画像のURL =600x)
+```
+
+- 画像の横幅は `=600x` のように指定できる
+- Alt テキストを付ける
+- 画像直下の `*キャプション*` はキャプション風に表示される
+
+### コードブロック
+
+````md
+```ts
+const message = "hello";
+```
+
+```ts:app.ts
+const message = "hello";
+```
+
+```diff ts:app.ts
+- const oldValue = 1;
++ const newValue = 2;
+```
+````
+
+- 言語指定でシンタックスハイライトされる
+- `言語:ファイル名` でファイル名表示ができる
+- `diff 言語名` で差分表示もできる
+
+### 数式
+
+- ブロック数式は `$$` で囲む
+- インライン数式は `$...$`
+- `$$` の前後は空行にする
+
+### メッセージと詳細表示
+
+```md
+:::message
+メッセージ
+:::
+
+:::message alert
+警告メッセージ
+:::
+
+:::details タイトル
+詳細内容
+:::
+```
+
+- 補足は `:::message`
+- 注意喚起は `:::message alert`
+- 折りたたみは `:::details タイトル`
+
+### 埋め込み
+
+- URL だけの行でリンクカードになる
+- X の投稿 URL だけの行で埋め込める
+- YouTube URL だけの行で埋め込める
+- GitHub のファイル URL だけの行で埋め込める
+
+### 脚注とコメント
+
+```md
+脚注の例[^1]
+
+[^1]: 脚注の内容
+
+<!-- 公開されないメモ -->
+```
+
+- 脚注が使える
+- HTML コメントは公開ページに表示されない
+- 複数行コメントには対応しない
+
 ## ふだんの運用
 
 1. `npx zenn preview` でプレビューを起動
 2. `articles/` または `books/` に原稿を追加
 3. Front Matter や `config.yaml` を整える
-4. `published` を確認して公開状態を切り替える
-5. Git で管理して push する
+4. Markdown 記法崩れを確認する
+5. `published` を確認して公開状態を切り替える
+6. Git で管理して push する
 
 ## このリポジトリで意識すること
 
@@ -123,8 +212,12 @@ chapters:
 - ファイル名や slug の命名ルールを崩さない
 - 公開前は `published: false` を維持する
 - 本は `config.yaml` の `chapters` と実ファイルを一致させる
+- 見出しは `##` 開始を基本にする
+- 画像には Alt テキストと必要に応じて幅指定を付ける
+- 注意書きや補足は Zenn 独自記法を優先する
 
 ## 参考
 
 - [Zenn CLI をインストールする](https://zenn.dev/zenn/articles/install-zenn-cli)
 - [Zenn CLI の使い方](https://zenn.dev/zenn/articles/zenn-cli-guide)
+- [Zenn の Markdown 記法一覧](https://zenn.dev/zenn/articles/markdown-guide)
