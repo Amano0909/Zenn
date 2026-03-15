@@ -2,7 +2,7 @@
 title: "Windows PEで作るデータ削除USB(Cipher＆diskpart)"
 emoji: "📝"
 type: "tech"
-topics: ["cipher", "diskpart", "technology", "windows-pe"]
+topics: ["cipher", "diskpart", "technology", "windowspe"]
 published: false
 ---
 

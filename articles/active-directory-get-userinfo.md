@@ -2,7 +2,7 @@
 title: "[Active Directory] 特定のコンテナのユーザー情報を取得する"
 emoji: "📝"
 type: "tech"
-topics: ["active-directory", "powershell", "technology"]
+topics: ["activedirectory", "powershell", "technology"]
 published: false
 ---
 

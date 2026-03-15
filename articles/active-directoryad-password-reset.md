@@ -2,7 +2,7 @@
 title: "[Active Directory]ADユーザーのパスワードを一括で更新する"
 emoji: "📝"
 type: "tech"
-topics: ["active-directory", "powershell", "technology"]
+topics: ["activedirectory", "powershell", "technology"]
 published: false
 ---
 

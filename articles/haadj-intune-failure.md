@@ -2,7 +2,7 @@
 title: "[Azure AD][Hybrid Azure AD Join][Intune]HAADJ時にIntuneにうまく登録されないときの対処"
 emoji: "📝"
 type: "tech"
-topics: ["azure-ad", "hybrid-azure-ad-join", "intune", "technology"]
+topics: ["azuread", "haadj", "intune", "technology"]
 published: false
 ---
 

@@ -2,7 +2,7 @@
 title: "[Jamf]ケースオープンの仕方"
 emoji: "📝"
 type: "tech"
-topics: ["case-open", "jamf", "technology"]
+topics: ["caseopen", "jamf", "technology"]
 published: false
 ---
 

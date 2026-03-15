@@ -2,7 +2,7 @@
 title: "[Jamf]利用しているコンピュータの拡張属性についてまとめる"
 emoji: "📝"
 type: "tech"
-topics: ["jamf", "jamf-pro", "technology"]
+topics: ["jamf", "jamfpro", "technology"]
 published: false
 ---
 

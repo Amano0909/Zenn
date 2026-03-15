@@ -2,7 +2,7 @@
 title: "[GWS]Gmailで暗号化されたファイルを弾く"
 emoji: "📝"
 type: "tech"
-topics: ["gmail", "google-workspace", "ppap", "technology"]
+topics: ["gmail", "googleworkspace", "ppap", "technology"]
 published: false
 ---
 

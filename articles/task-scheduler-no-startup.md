@@ -2,7 +2,7 @@
 title: "タスクスケジューラが起動できない問題について"
 emoji: "📝"
 type: "tech"
-topics: ["task-scheduler", "technology"]
+topics: ["taskscheduler", "technology"]
 published: false
 ---
 

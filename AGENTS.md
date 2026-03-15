@@ -23,6 +23,11 @@
 - 記事ファイル先頭には Front Matter を必ず書く
 - `title`、`emoji`、`type`、`topics`、`published` を明示する
 - `title` は 70 文字以内に収める
+- `topics` は 18 文字以内に収める
+- `topics` は半角英小文字と数字のみを使う
+- `topics` にスペースや記号は使わない
+- `topics` にハイフンも使わない
+- `C++` は `cpp`、`C#` は `csharp` のように置き換える
 - `type` は `tech` または `idea`
 - `published: false` は下書き、`published: true` は公開対象
 - slug は 12〜50 文字
@@ -57,6 +62,7 @@
 - WordPress 独自ショートコードはそのまま残さない
 - 生の HTML は必要最小限にし、Zenn 標準 Markdown や独自記法へ寄せる
 - WordPress から移行する記事タイトルも 70 文字以内に調整する
+- WordPress 由来のカテゴリやタグは `topics` 制約に合わせて 18 文字以内の英小文字・数字のみに整える
 - 画像は移行後も参照切れしない URL を使う
 - 大きすぎる画像は圧縮または幅指定を検討する
 - 内部リンクは WordPress ドメイン依存のまま放置しない
@@ -75,6 +81,9 @@
 - slug が命名ルールを満たしているか
 - Front Matter または `config.yaml` の必須項目が揃っているか
 - 記事タイトルが 70 文字以内か
+- `topics` が 18 文字以内か
+- `topics` にスペースや記号が入っていないか
+- `topics` にハイフンが入っていないか
 - `published` の値が意図どおりか
 - 本の `chapters` と実ファイルにズレがないか
 - 見出し階層が不自然でないか

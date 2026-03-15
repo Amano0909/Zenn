@@ -2,7 +2,7 @@
 title: "Jamf ProとEntra IDでデバイスコンプライアンス登録がうまくいかない対処法"
 emoji: "📝"
 type: "tech"
-topics: ["jamf-pro", "technology"]
+topics: ["jamfpro", "technology"]
 published: false
 ---
 

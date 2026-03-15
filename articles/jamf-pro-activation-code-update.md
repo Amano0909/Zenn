@@ -2,7 +2,7 @@
 title: "[Jamf]Jamf Proのアクティベーションコードを更新する"
 emoji: "📝"
 type: "tech"
-topics: ["jamf-pro", "technology"]
+topics: ["jamfpro", "technology"]
 published: false
 ---
 

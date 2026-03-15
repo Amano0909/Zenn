@@ -2,7 +2,7 @@
 title: "[Microsoft Sentinel] インシデント発生時の通知をSlackに飛ばす"
 emoji: "📝"
 type: "tech"
-topics: ["microsoft-sentinel", "technology"]
+topics: ["microsoftsentinel", "technology"]
 published: false
 ---
 

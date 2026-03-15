@@ -2,7 +2,7 @@
 title: "[GAS][Google Workspace]GWSのライセンスの残りをSlackに通知させる"
 emoji: "📝"
 type: "tech"
-topics: ["gas", "google-workspace", "technology"]
+topics: ["gas", "googleworkspace", "technology"]
 published: false
 ---
 

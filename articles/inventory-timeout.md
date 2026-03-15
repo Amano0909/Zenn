@@ -2,7 +2,7 @@
 title: "[Jamf]イベントリ収集時にタイムアウトエラーがおきる件について"
 emoji: "📝"
 type: "tech"
-topics: ["error", "jamf", "jamf-pro", "technology"]
+topics: ["error", "jamf", "jamfpro", "technology"]
 published: false
 ---
 

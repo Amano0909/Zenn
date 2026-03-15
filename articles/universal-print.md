@@ -2,7 +2,7 @@
 title: "Universal Printはまだ辛そうだって話"
 emoji: "📝"
 type: "tech"
-topics: ["technology", "universal-print"]
+topics: ["technology", "universalprint"]
 published: false
 ---
 

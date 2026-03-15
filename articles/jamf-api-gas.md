@@ -2,7 +2,7 @@
 title: "[GAS][Jamf Pro]Jamf Pro のAPIをGASで叩いてみる。"
 emoji: "📝"
 type: "tech"
-topics: ["jamf-pro", "technology"]
+topics: ["jamfpro", "technology"]
 published: false
 ---
 

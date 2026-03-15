@@ -2,7 +2,7 @@
 title: "[Microsoft Defender SmartScreen]SmartScreenで特定のアプリを除外することはできるのか"
 emoji: "📝"
 type: "tech"
-topics: ["microsoft-defender", "technology"]
+topics: ["microsoftdefender", "technology"]
 published: false
 ---
 

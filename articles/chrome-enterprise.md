@@ -2,7 +2,7 @@
 title: "Chrome Enterpriseについて調べたのでまとめておく"
 emoji: "📝"
 type: "tech"
-topics: ["google-workspace", "technology"]
+topics: ["googleworkspace", "technology"]
 published: false
 ---
 

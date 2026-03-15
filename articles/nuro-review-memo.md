@@ -2,7 +2,7 @@
 title: "NURO光は本当に早いのか？実測値と各ゲームのpingを測定してみた(千葉県八千代市)"
 emoji: "📝"
 type: "tech"
-topics: ["apex-legends", "escape-from-tarkov", "fast-com", "league-of-legends", "nuroe58589"]
+topics: ["apexlegends", "escapefromtarkov", "fastcom", "leagueoflegends", "nuroe58589"]
 published: false
 ---
 

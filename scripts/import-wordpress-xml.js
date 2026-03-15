@@ -13,6 +13,25 @@ const TITLE_OVERRIDES = new Map([
     "Jamf ProとEntra IDでデバイスコンプライアンス登録がうまくいかない対処法",
   ],
 ]);
+const TOPIC_OVERRIDES = new Map([
+  ["hybrid-azure-ad-join", "haadj"],
+  ["active-directory", "activedirectory"],
+  ["apex-legends", "apexlegends"],
+  ["azure-ad", "azuread"],
+  ["case-open", "caseopen"],
+  ["dns-benchmark", "dnsbenchmark"],
+  ["escape-from-tarkov", "escapefromtarkov"],
+  ["fast-com", "fastcom"],
+  ["google-public-dns", "googlepublicdns"],
+  ["google-workspace", "googleworkspace"],
+  ["jamf-pro", "jamfpro"],
+  ["league-of-legends", "leagueoflegends"],
+  ["microsoft-defender", "microsoftdefender"],
+  ["microsoft-sentinel", "microsoftsentinel"],
+  ["task-scheduler", "taskscheduler"],
+  ["universal-print", "universalprint"],
+  ["windows-pe", "windowspe"],
+]);
 const VALID_IMAGE_EXTENSIONS = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp"]);
 const VOID_TAGS = new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"]);
 const BLOCK_TAGS = new Set([
@@ -215,14 +234,19 @@ function buildTopics(categories) {
 }
 
 function sanitizeTopic(input) {
-  const topic = String(input || "")
+  let topic = String(input || "")
     .trim()
     .toLowerCase()
     .replace(/_/g, "-")
     .replace(/[^a-z0-9-]/g, "")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
+  topic = TOPIC_OVERRIDES.get(topic) || topic;
+  topic = topic.replace(/-/g, "");
   if (/^[0-9a-f-]{12,}$/.test(topic)) {
+    return "";
+  }
+  if ([...topic].length > 18) {
     return "";
   }
   return topic;

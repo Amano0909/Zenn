@@ -2,7 +2,7 @@
 title: "我が家に合ったDNSサーバーを速度を計測して選択しよう【DNS Benchmark】"
 emoji: "📝"
 type: "tech"
-topics: ["cloudflare", "dns", "dns-benchmark", "google-public-dns", "quad9"]
+topics: ["cloudflare", "dns", "dnsbenchmark", "googlepublicdns", "quad9"]
 published: false
 ---
 

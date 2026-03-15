@@ -71,6 +71,11 @@ published: false
 - `title` は 70 文字以内
 - `slug` は 12〜50 文字
 - 使える文字は半角英小文字 (`a-z`)、数字 (`0-9`)、ハイフン (`-`) のみ
+- `topics` は 18 文字以内
+- `topics` は半角英小文字と数字のみを使う
+- `topics` にスペースや記号は使わない
+- `topics` にハイフンも使わない
+- `C++` は `cpp`、`C#` は `csharp` のように置き換える
 - `type` は `tech` または `idea`
 - `published: false` なら下書き
 - `published: true` にすると公開対象

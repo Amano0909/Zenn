@@ -2,7 +2,7 @@
 title: "[Azure AD]モバイルデバイスでパスワードベースのアプリケーションを利用する"
 emoji: "📝"
 type: "tech"
-topics: ["azure-ad", "technology"]
+topics: ["azuread", "technology"]
 published: false
 ---
 

@@ -2,7 +2,7 @@
 title: "[Jamf]OSのアップデートを制御する"
 emoji: "📝"
 type: "tech"
-topics: ["jamf-pro", "technology"]
+topics: ["jamfpro", "technology"]
 published: false
 ---
 

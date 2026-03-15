@@ -2,7 +2,7 @@
 title: "[Active Directory]新規ユーザーをCSVで取り込む"
 emoji: "📝"
 type: "tech"
-topics: ["active-directory", "powershell", "technology"]
+topics: ["activedirectory", "powershell", "technology"]
 published: false
 ---
 

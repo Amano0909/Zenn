@@ -2,7 +2,7 @@
 title: "[Intune]AADJ端末でユーザーにローカル管理者権限を与えたい"
 emoji: "📝"
 type: "tech"
-topics: ["azure-ad", "intune", "technology"]
+topics: ["azuread", "intune", "technology"]
 published: false
 ---
 
