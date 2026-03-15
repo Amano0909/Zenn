@@ -7,6 +7,12 @@ const XML_PATH = path.join(EXPORT_DIR, "WordPress.2026-03-15.xml");
 const UPLOADS_DIR = path.join(EXPORT_DIR, "uploads");
 const ARTICLES_DIR = path.join(ROOT, "articles");
 const IMAGES_DIR = path.join(ROOT, "images");
+const TITLE_OVERRIDES = new Map([
+  [
+    "Jamf ProとEntra IDと利用してデバイスコンプライアンスを構成する際に登録がうまくいかない対処法（リダイレクトがうまくいかない問題）",
+    "Jamf ProとEntra IDでデバイスコンプライアンス登録がうまくいかない対処法",
+  ],
+]);
 const VALID_IMAGE_EXTENSIONS = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp"]);
 const VOID_TAGS = new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"]);
 const BLOCK_TAGS = new Set([
@@ -152,7 +158,7 @@ function parsePosts(xml) {
     }
 
     const rawSlug = extractTagValue(rawItem, "wp:post_name");
-    const title = extractTagValue(rawItem, "title");
+    const title = normalizeTitle(extractTagValue(rawItem, "title"));
     const content = extractTagValue(rawItem, "content:encoded") || "";
     const categories = extractCategories(rawItem);
     const topics = buildTopics(categories);
@@ -271,6 +277,11 @@ function buildFrontMatter(post) {
     "---",
     "",
   ].join("\n");
+}
+
+function normalizeTitle(title) {
+  const overridden = TITLE_OVERRIDES.get(title) || title;
+  return overridden;
 }
 
 function createArticleContext(slug, uploadsIndex) {

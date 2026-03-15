@@ -22,6 +22,7 @@
 
 - 記事ファイル先頭には Front Matter を必ず書く
 - `title`、`emoji`、`type`、`topics`、`published` を明示する
+- `title` は 70 文字以内に収める
 - `type` は `tech` または `idea`
 - `published: false` は下書き、`published: true` は公開対象
 - slug は 12〜50 文字
@@ -55,6 +56,7 @@
 
 - WordPress 独自ショートコードはそのまま残さない
 - 生の HTML は必要最小限にし、Zenn 標準 Markdown や独自記法へ寄せる
+- WordPress から移行する記事タイトルも 70 文字以内に調整する
 - 画像は移行後も参照切れしない URL を使う
 - 大きすぎる画像は圧縮または幅指定を検討する
 - 内部リンクは WordPress ドメイン依存のまま放置しない
@@ -72,6 +74,7 @@
 - ファイル配置が Zenn CLI の標準構造に沿っているか
 - slug が命名ルールを満たしているか
 - Front Matter または `config.yaml` の必須項目が揃っているか
+- 記事タイトルが 70 文字以内か
 - `published` の値が意図どおりか
 - 本の `chapters` と実ファイルにズレがないか
 - 見出し階層が不自然でないか
