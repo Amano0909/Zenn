@@ -3,7 +3,7 @@ title: "Windows PEで作るデータ削除USB(Cipher＆diskpart)"
 emoji: "📝"
 type: "tech"
 topics: ["cipher", "diskpart", "technology", "windowspe"]
-published: false
+published: true
 ---
 
 PC廃棄のときに必ずやらなければ行けない作業ありますよね。
@@ -11,9 +11,6 @@ PC廃棄のときに必ずやらなければ行けない作業ありますよね
 そうデータ削除作業。データ削除は論理的にしてもいいし、物理的に壊してもいいですが今回共有できればと思っているのは「論理削除」時に使用するUSBの作り方になります。
 
 Windows PE、Cipher、diskpartをこの3つを利用してデータ削除を行います。
-
-https://amano-yuruyuru.com/pc-disposal
-
 今回作業に当たり、下記を参考にさせていただきました。感謝します。
 
 [Windows PEとバッチファイルでデータ消去USBを作成](https://blacksheepnote.blogspot.com/2019/07/windows-peusb.html)
@@ -30,11 +27,7 @@ Cipherとは？
 
 コマンド・プロンプト上で使用できるWindows OSのツールになります。
 
-試しに「
-
-cipher /?
-
-」と打ってヘルプを確認してみてください。
+試しに「cipher /?」と打ってヘルプを確認してみてください。
 
 ![](/images/data-deletion-windowspe/image-01.png)
 
@@ -46,33 +39,19 @@ diskpartとは？
 
 「対話形式でハードディスクのあれこれを操作するときに使うコマンド」と覚えていただければと思います。パーティションを作成したり、フォーマットしたり、データを削除したり。
 
-今回使う主に使うコマンドは「
-
-clean all
-
-」になります。ディスクの内容を全部削除し、すべてのセクタに0を書き込みます。
+今回使う主に使うコマンドは「clean all」になります。ディスクの内容を全部削除し、すべてのセクタに0を書き込みます。
 
 diskpartはWindows PEに実装されているので別途導入の必要はありません。
 
 ## Windows PE の導入とUSB作成
 
-1 「
-
-Windows ADK」と「Windows PE アドオン (ADK 用)」をPCにインストールします。ダウンロードは[ここ](https://docs.microsoft.com/ja-jp/windows-hardware/get-started/adk-install#winADK)から行ってください。インストールは基本的にはデフォルトのままで大丈夫です。
+1 「Windows ADK」と「Windows PE アドオン (ADK 用)」をPCにインストールします。ダウンロードは[ここ](https://docs.microsoft.com/ja-jp/windows-hardware/get-started/adk-install#winADK)から行ってください。インストールは基本的にはデフォルトのままで大丈夫です。
 
 ![](/images/data-deletion-windowspe/image-02.png)
 
-2 「展開およびイメージング ツール環境」を
+2 「展開およびイメージング ツール環境」を**管理者権限で**起動します。スタートメニュー→Windows Kits内にあります。右クリックし「その他」→「管理者として実行」で起動してください。
 
-**管理者権限で**
-
-起動します。スタートメニュー→Windows Kits内にあります。右クリックし「その他」→「管理者として実行」で起動してください。
-
-3　WindowsPEの元となるファイルのコピーを下記のコマンドで行います。詳細はMicrosoftの
-
-[この](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/copype-command-line-options)
-
-ページを参照。
+3　WindowsPEの元となるファイルのコピーを下記のコマンドで行います。詳細はMicrosoftの[この](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/copype-command-line-options)ページを参照。
 
 ```plane
 copype amd64 C:\WinPE_amd64
@@ -86,13 +65,7 @@ Dism /Mount-Image /ImageFile:"C:\WinPE_amd64\media\sources\boot.wim" /index:1 /M
 
 5 エクスプローラーでの作業になります。
 
-「C:\WinPE_amd64\mount\Windows\
-
-System32
-
-」内に作成した3つのファイルと
-
-cipher.exeをコピーしてください。※ファイルは「バッチファイル群」を参照。
+「C:\WinPE_amd64\mount\Windows\System32」内に作成した3つのファイルとcipher.exeをコピーしてください。※ファイルは「バッチファイル群」を参照。
 
 6 アンマウントを下記のコマンドで行います。
 
@@ -167,6 +140,12 @@ start wipe_hdd.bat
 
 https://note.com/ringo_o_7/n/nd72d772b83f1
 
-強強のエンジニア方ばかりであまり、恐れ多くて発言やGiveはできていませんがなにかコミュニティに返せればなと日々思っています。ROM専すみません笑
+## 追記
 
-それでは＼(^o^)／
+記録媒体がSSDになってから0.1書きこみは意味がなさないことが多いです。
+下記の2手法が直近有効です。
+
+- 暗号化(FileVault,BitLocker)したのち初期化
+- メーカー特有の方法
+  - HP：[HP Secure Erase](https://support.hp.com/jp-ja/document/ish_7095898-7145636-16)
+  - Lenovo：[ThinkShield Secure Wipe](https://techblog-lenovo.com/2023/03/28/thinkshield-secure-wipe/)

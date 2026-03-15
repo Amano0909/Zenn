@@ -24,6 +24,8 @@ npx zenn new:book
   - Zenn の記事を置く
 - `books/`
   - Zenn の本を置く
+- `drafts/`
+  - Zenn 変換前の下書き Markdown を置く
 
 ## 補足
 

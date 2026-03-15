@@ -4,6 +4,7 @@
 
 ## 目的
 
+- `drafts/` に Zenn 変換前の下書き原稿を置く
 - `articles/` に Zenn 記事を置く
 - `books/` に Zenn の本を置く
 - Zenn CLI が前提とする構造と命名を崩さない
@@ -11,6 +12,7 @@
 
 ## 最重要ルール
 
+- `drafts/` は変換前の下書き置き場として使う
 - 記事ファイルは `articles/<slug>.md` に置く
 - 本は `books/<book-slug>/` ディレクトリ単位で管理する
 - 本の設定は `books/<book-slug>/config.yaml` に置く
@@ -73,10 +75,13 @@
 - 新規本は原則 `npx zenn new:book` を使って作成する
 - 執筆や確認時は `npx zenn preview` を使う
 - 既存構造を壊す変更をする前に、Zenn CLI 互換性を確認する
+- `drafts/` は下書き原稿用として利用してよい
+- `drafts/` 内の原稿をそのまま Zenn 公開物として扱わない
 - `articles/` と `books/` 以外に本文管理用の独自階層を勝手に増やさない
 
 ## 推奨チェック
 
+- `drafts/` と `articles/` の役割が混ざっていないか
 - ファイル配置が Zenn CLI の標準構造に沿っているか
 - slug が命名ルールを満たしているか
 - Front Matter または `config.yaml` の必須項目が揃っているか

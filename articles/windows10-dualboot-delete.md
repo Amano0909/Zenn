@@ -3,7 +3,7 @@ title: "デュアルブート削除方法"
 emoji: "📝"
 type: "tech"
 topics: ["linux", "technology"]
-published: false
+published: true
 ---
 
 Linuxを試したい！
@@ -44,7 +44,6 @@ bcdedit /enum firmware
 上記のような画面になると思います。
 
 このなかでdescriptionがubuntuいう項目がないでしょうか。
-
 僕の画像ですと、すでに削除してしまったためありません。
 
 identifier の値が識別番号になります。
@@ -63,7 +62,4 @@ bcdedit /enum firmware
 ```
 
 のコマンドを実行してdescriptionの値がubutuの項目が消えていれば成功です！
-
 最後にUbuntuをインストールしたドライブはフォーマットしておきましょう。
-
-それでは、記事を最後までお読みいただきありがとうございました。

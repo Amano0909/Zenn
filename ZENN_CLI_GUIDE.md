@@ -34,6 +34,8 @@ npx zenn new:book
 
 ```text
 .
+├─ drafts/
+│  └─ *.md
 ├─ articles/
 │  └─ <slug>.md
 ├─ books/
@@ -49,6 +51,8 @@ npx zenn new:book
   - 記事ファイルを置く
 - `books/`
   - 本ごとのディレクトリを置く
+- `drafts/`
+  - Zenn 用に整える前の下書き Markdown を置く
 - `books/<book-slug>/config.yaml`
   - 本のタイトル、概要、公開設定などを管理する
 
@@ -214,6 +218,7 @@ const message = "hello";
 ## このリポジトリで意識すること
 
 - 記事は `articles/` 直下に置く
+- 下書き原稿は `drafts/` に置き、公開用は `articles/` に置く
 - 本は `books/<book-slug>/` 単位で管理する
 - ファイル名や slug の命名ルールを崩さない
 - 公開前は `published: false` を維持する
