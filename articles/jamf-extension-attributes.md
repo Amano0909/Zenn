@@ -3,7 +3,7 @@ title: "[Jamf]利用しているコンピュータの拡張属性についてま
 emoji: "📝"
 type: "tech"
 topics: ["jamf", "jamfpro", "technology"]
-published: false
+published: true
 ---
 
 今回は実際に使っているJamfの拡張属性についてまとめようと思います。
@@ -21,7 +21,7 @@ https://docs.jamf.com/ja/10.41.0/jamf-pro/documentation/Computer_Extension_Attri
 > - スクリプト
 > - LDAP 属性マッピング
 >
-> Jamf Pro では、Jamf Pro で利用可能なテンプレートから、または手動で拡張属性を作成できます。Jamf Pro API を介してプログラムで拡張属性を作成することもできます。詳しくは、の「[Extension Attributes (拡張属性)](https://developer.jamf.com/developer-guide/docs/extension-attributes)」を参照してください。
+> Jamf Pro では、Jamf Pro で利用可能なテンプレートから、または手動で拡張属性を作成できます。Jamf Pro API を介してプログラムで拡張属性を作成することもできます。詳しくは、「[Extension Attributes (拡張属性)](https://developer.jamf.com/developer-guide/docs/extension-attributes)」を参照してください。
 
 Jamfは標準でかなりのイベントリ情報をすることが可能です。
 
@@ -174,18 +174,11 @@ else
 
 GitHubなので検索すると公開してくれている方いらっしゃいますね。
 
-この辺りを
-
-パクら
-
-参考にさせてもらいましょう。
+この辺りを参考にさせてもらいましょう。
 
 https://github.com/search?q=jamf+Extension+attributes&type=Repositories
 
 ## まとめ
 
 今回はJamfの拡張属性について触れました。
-
 標準のイベントリに拾ってきたい属性値がない場合はスクリプトで拾ってこれるか試してみましょう。
-
-最後まで記事を読んでくださりありがとうございました。

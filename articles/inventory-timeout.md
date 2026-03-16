@@ -3,7 +3,7 @@ title: "[Jamf]イベントリ収集時にタイムアウトエラーがおきる
 emoji: "📝"
 type: "tech"
 topics: ["error", "jamf", "jamfpro", "technology"]
-published: false
+published: true
 ---
 
 ## 問題、エラー内容
@@ -46,16 +46,12 @@ Serial Number: xxxxx
 
 https://community.jamf.com/t5/jamf-pro/recon-error-software-update-timed-out-after-300-seconds/td-p/268937
 
-スレッドの内容を確認するとどうやら「
-
-利用できるソフトウェアアップデートを収集」にチェックが入っているとイベントリ収集がタイムアウトしてこけているっぽい。
+スレッドの内容を確認するとどうやら「利用できるソフトウェアアップデートを収集」にチェックが入っているとイベントリ収集がタイムアウトしてこけているっぽい。
 
 なるほど。
-
 ちなみにこの設定はここです。
 
 コンピュータ管理-管理フレームワーク-イベントリ収集-
-
 利用できるソフトウェアアップデートを収集
 
 ![](/images/inventory-timeout/image-01.png)
@@ -75,17 +71,13 @@ https://twitter.com/AmanoH0909/status/1569157201201340421
 > 「Software update timed out after 300 seconds.」の件に関しまして、弊社のEngineerに確認したところ、この問題は、sofwareupdateのAPIに関連するものです。現在、Apple様によるこの問題の解決を待っているところです。 検証機で確認したところ、OSは12.6で、「利用できるソフトウェアアップデートを収集」にチェックが入っている場合、タイムアウトのエラーを出さずにインベントリ更新を実行することができました。 ただし、このエラーは断続的に発生する可能性があるため、Apple様によって問題が解決されるまでは、この機能を無効にすることをお勧めします。 詳細については、下記のリンクをご覧ください https://developer.apple.com/forums/thread/701096 （英語のみ）
 
 おー、なるほど。
-
 Jamf側の問題というより、Apple側のAPIの問題っぽいです。
 
 とりあえず、無効にするのがお勧めらしいです。
-
 ということで一旦OFFります！
 
 ## まとめ
 
 今回はJamf でインベントリ収集エラーがでたときの対応についてまとめました。
-
 Notion調べてみて解決しない場合はおとなしくケースオープンするのがよさそうですね。
-
 ご覧いただきありがとうございました。

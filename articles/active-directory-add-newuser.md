@@ -3,11 +3,10 @@ title: "[Active Directory]新規ユーザーをCSVで取り込む"
 emoji: "📝"
 type: "tech"
 topics: ["activedirectory", "powershell", "technology"]
-published: false
+published: true
 ---
 
 今回はActive Directoryに新規でユーザーをCSVで取り込む方法を紹介しようと思います。
-
 新入社員が大量に入ってくるときに使ってくださいね。
 
 ## コード
@@ -69,9 +68,7 @@ $title=$_."Title"
 注意点だけ書きます。
 
 - no
-  - なくても大丈夫です。自己流で処理が終わったか見やすいように「
-
-    `Write-Host $no`」で書き出しているだけです。
+  - なくても大丈夫です。自己流で処理が終わったか見やすいように「`Write-Host $no`」で書き出しているだけです。
 
 - pwd
   - ユーザーの初期パスワードを定義しています。
@@ -104,7 +101,4 @@ Write-Host $no
 ## まとめ
 
 大量に新入社員が来たときはアカウント作成が辛いですよね。。
-
 少しでもスクリプトを使って楽をしましょう。
-
-最後までお読みいただきありがとうございました。

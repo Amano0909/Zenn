@@ -3,12 +3,10 @@ title: "[Jamf]ケースオープンの仕方"
 emoji: "📝"
 type: "tech"
 topics: ["caseopen", "jamf", "technology"]
-published: false
+published: true
 ---
 
-前回書いたこちらの記事ではたまたまJamfの営業さんに助けてもらってケースオープンさせてもらいました。自分でもケースオープンできるように備忘録としてケースオープンの仕方を残しておきます。
-
-https://amano-yuruyuru.com/inventory-timeout
+たまたまJamfの営業さんに助けてもらってケースオープンさせてもらいました。自分でもケースオープンできるように備忘録としてケースオープンの仕方を残しておきます。
 
 ## ケースオープンの仕方
 
@@ -53,11 +51,9 @@ https://amano-yuruyuru.com/inventory-timeout
   - 問題の内容
 
 上記を記入してケースオープンが可能です。
-
 ## サポートの対応について
 
 ケースがオープンされるとエージェントさんとのやりとりが始まります。
-
 結論から言うと丁寧な対応で好印象でした。
 
 箇条書きすると下記の感じ。
@@ -70,12 +66,11 @@ https://amano-yuruyuru.com/inventory-timeout
   - 機械翻訳した内容じゃなくて日本語わかる人が書いている文章
 
 日本語対応は正直いってびっくりしましたねー
-
 英語で返信したのですが
 
 > As well I noticed your reply was in English but I can also support in Japanese if that is preferred.
 
-なんて返信が来て「デキるこいつは('Д')」なんて思いました。
+なんて返信が来て「デキるこいつは」なんて思いました。
 
 ## まとめ
 
@@ -90,4 +85,4 @@ https://amano-yuruyuru.com/inventory-timeout
 
 https://twitter.com/syuheiuda/status/1572810195289325568
 
-それでは、記事を読んでくださりありがとうございました。
+それでは
