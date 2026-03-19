@@ -3,7 +3,7 @@ title: "[Intune]Windows端末のIPv6をレジストリで管理する"
 emoji: "📝"
 type: "tech"
 topics: ["intune", "technology"]
-published: false
+published: true
 ---
 
 お疲れ様です。
@@ -16,27 +16,21 @@ https://learn.microsoft.com/ja-jp/troubleshoot/windows-server/networking/configu
 
 設定するのはこいつですね。
 
-**場所**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\` **名前**: DisabledComponents **種類**: REG_DWORD **最小値**: 0x00 (既定値) **最大値**: 0xFF (IPv6 が無効)
+**場所**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\` 
+**名前**: DisabledComponents 
+**種類**: REG_DWORD 
+**最小値**: 0x00 (既定値) 
+**最大値**: 0xFF (IPv6 が無効)
 
-今回の場合「
-
-IPv6 よりも IPv4 を優先する
-
-」を設定したいと思います。
+今回の場合「IPv6 よりも IPv4 を優先する」を設定したいと思います。
 
 つまり設定する値は以下
 
 10 進数の 32
-
 16 進数の 0x20
-
 バイナリ xx1x xxxx
 
-「
-
-IPv6 を無効にする代わりに推奨されます。
-
-」とドキュメントに書いてあるのでIPv6無効にする要件が出てきたらこの値を候補にいれてもいいかなと思っています。
+「IPv6 を無効にする代わりに推奨されます。」とドキュメントに書いてあるのでIPv6無効にする要件が出てきたらこの値を候補にいれてもいいかなと思っています。
 
 ## レジストリ値のエクスポート＆intunewinファイルの作成
 
@@ -44,9 +38,7 @@ IPv6 を無効にする代わりに推奨されます。
 
 該当のレジストリを右クリックしてエクスポートします。
 
-今回の場合ですと
-
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\`です。
+今回の場合ですと`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\`です。
 
 ![](/images/intune-ipv6-memo/image-01.png)
 
@@ -70,11 +62,9 @@ https://qiita.com/ShinichiroKosugi/items/c69764daa18d212eeee2
 ## Intuneで配る
 
 ここまでで配りたいregをintunewinファイルにすることができました。
-
 なのであとはIntuneで配るだけです。
 
 Microsoft Intune 管理センターからアプリを追加します。
-
 最初にintunewinファイルはどれか聞かれるので先ほど作成したファイルを選択します。
 
 ![](/images/intune-ipv6-memo/image-02.png)
@@ -118,9 +108,8 @@ Microsoft Intune 管理センターからアプリを追加します。
   - 値：32
 
 ここの設定値が一番重要です。文字列比較では10進数の値を指定しましょう。
-
 あとは適当な割り当てを行えばデバイスにレジストリが配られます。
 
 以上です。
 
-なにかしら参考になったらうれしいです。
+

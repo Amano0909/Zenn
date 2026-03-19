@@ -3,7 +3,7 @@ title: "MS系のライセンス数をSlackに通知させる"
 emoji: "📝"
 type: "tech"
 topics: ["gas", "technology"]
-published: false
+published: true
 ---
 
 情シスの運用業務で困るのがライセンス切れ
@@ -143,48 +143,25 @@ function main(){
 ### 大まかな流れ
 
 - API叩くためにEntra ID側にアプリケーションを作成する
-  - アプリケーションの作成方法などはクラメソさんの
-
-    [記事](https://dev.classmethod.jp/articles/get-azuread-signin-log/)
-
-    が参考になる
-  - 今回叩くのは
-
-    `subscribedSkus`なので
-
-    [公式ページ](https://learn.microsoft.com/ja-jp/graph/api/subscribedsku-list?view=graph-rest-1.0&tabs=http)
-
-    を参考に適切に権限を設定する
+  - アプリケーションの作成方法などはクラメソさんの[記事](https://dev.classmethod.jp/articles/get-azuread-signin-log/)が参考になる
+  - 今回叩くのは`subscribedSkus`なので[公式ページ](https://learn.microsoft.com/ja-jp/graph/api/subscribedsku-list?view=graph-rest-1.0&tabs=http)を参考に適切に権限を設定する
     - `LicenseAssignment.Read.All`の権限あれば大丈夫そう
-
 - アプリケーションの作成が終わったら下記の値をメモしておく
   - clientID: クライアントID
   - clientSecret: クライアントシークレット
   - tenantID : テナントID
-
 - Slack側の受け口を用意する
   - 簡単なのはSlackワークフロー
-    - [Slack 外部で開始されるワークフローを作成する](https://slack.com/intl/ja-jp/help/articles/360041352714-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B---Slack-%E5%A4%96%E9%83%A8%E3%81%A7%E9%96%8B%E5%A7%8B%E3%81%95%E3%82%8C%E3%82%8B%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)
-
-      を参考に
-    - カスタム変数として
-
-      `text`を用意しておく
-
+    - [Slack 外部で開始されるワークフローを作成する](https://slack.com/intl/ja-jp/help/articles/360041352714-%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B---Slack-%E5%A4%96%E9%83%A8%E3%81%A7%E9%96%8B%E5%A7%8B%E3%81%95%E3%82%8C%E3%82%8B%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)を参考に
+    - カスタム変数として`text`を用意しておく
   - Webhook URLをメモしておく
-
 - スプレッドシートの用意＆コードの実行
   - メモした値をコードの中の変数に適切に設定しておく
     - clientID: クライアントID
     - clientSecret: クライアントシークレット
     - tenantID : テナントID
     - webhookUrl：Webhook URL
-
-  - 今回トークン情報などベタ書きしているなら本来なら
-
-    [プロパティサービス](https://qiita.com/massa-potato/items/2209ff367d65c5dd6181)
-
-    を利用するのが良きなのでいい感じに設定してください
+  - 今回トークン情報などベタ書きしているなら本来なら[プロパティサービス](https://qiita.com/massa-potato/items/2209ff367d65c5dd6181)を利用するのが良きなのでいい感じに設定してください
   - 定期的に通知がほしいならトリガーを定期的に実行するようにすれば良し
 
 ### getAccesstokenについて
@@ -192,17 +169,12 @@ function main(){
 - 引数：なし
 - 戻り値：アクセストークン
 - アクセストークン取得用の関数
-  - [公式ページ](https://learn.microsoft.com/ja-jp/graph/auth-v2-service?tabs=http)
-
-    を参考に書いている
+  - [公式ページ](https://learn.microsoft.com/ja-jp/graph/auth-v2-service?tabs=http)を参考に書いている
 
 ### getApiResponseについて
 
 - 引数：叩くURL
-  - `https://graph.microsoft.com/v1.0/hogehoge`の
-
-    `hogehoge`部分を引数として渡す
-
+  - `https://graph.microsoft.com/v1.0/hogehoge`の`hogehoge`部分を引数として渡す
 - 戻り値：APIのレスポンス
 - 取得したアクセストークンを利用してAPIを叩いて、レスポンスを取得する関数
 
@@ -219,11 +191,7 @@ function main(){
 
   を叩いてSKUに関する情報を取得している関数
   - ほしいSKUのみ if文で取得しているのでここは各々いい感じに設定してください
-    - 識別子については
-
-      [公式ページ](https://learn.microsoft.com/ja-jp/entra/identity/users/licensing-service-plan-reference)
-
-      を参考に
+    - 識別子については[公式ページ](https://learn.microsoft.com/ja-jp/entra/identity/users/licensing-service-plan-reference)を参考に
 
 ### writeMsについて
 

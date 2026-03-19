@@ -3,11 +3,10 @@ title: "[Intune]AADJ端末でユーザーにローカル管理者権限を与え
 emoji: "📝"
 type: "tech"
 topics: ["azuread", "intune", "technology"]
-published: false
+published: true
 ---
 
 あまりよろしくないのですがユーザーにローカル管理者権限を与えたい場合がありますよね。
-
 AD参加時にはGPOで制御を行っていましたがAADJ端末ではどのように制御を行えばいいでしょうか。
 
 この辺り対応することがあったので備忘録としてとこしておきます。
@@ -45,21 +44,9 @@ https://learn.microsoft.com/ja-jp/azure/active-directory/roles/permissions-refer
 
 解決方法は公式ドキュメントに書いてあります。
 
-> Windows 10 バージョン 20H2 以降では、Azure AD グループを使用して、
+> Windows 10 バージョン 20H2 以降では、Azure AD グループを使用して、[ローカル ユーザーとグループ](https://learn.microsoft.com/ja-jp/windows/client-management/mdm/policy-csp-localusersandgroups)の MDM ポリシーで Azure AD 参加済みデバイスの管理者特権を管理できます。 このポリシーを使用すると、Azure AD 参加済みデバイスのローカル管理者グループに個々のユーザーまたは Azure AD グループを割り当てることができ、さまざまなデバイス グループに対して個別の管理者をきめ細かく構成できます。
 >
-> [ローカル ユーザーとグループ](https://learn.microsoft.com/ja-jp/windows/client-management/mdm/policy-csp-localusersandgroups)
->
-> の MDM ポリシーで Azure AD 参加済みデバイスの管理者特権を管理できます。 このポリシーを使用すると、Azure AD 参加済みデバイスのローカル管理者グループに個々のユーザーまたは Azure AD グループを割り当てることができ、さまざまなデバイス グループに対して個別の管理者をきめ細かく構成できます。
->
-> 組織は、Intune の
->
-> [カスタム OMA-URI 設定](https://learn.microsoft.com/ja-jp/mem/intune/configuration/custom-settings-windows-10)
->
-> または
->
-> [アカウント保護ポリシー](https://learn.microsoft.com/ja-jp/mem/intune/protect/endpoint-security-account-protection-policy)
->
-> を使用してこれらのポリシーを管理することができます。 このポリシーを使用する際の考慮事項は次のとおりです。
+> 組織は、Intune の[カスタム OMA-URI 設定](https://learn.microsoft.com/ja-jp/mem/intune/configuration/custom-settings-windows-10) または[アカウント保護ポリシー](https://learn.microsoft.com/ja-jp/mem/intune/protect/endpoint-security-account-protection-policy)を使用してこれらのポリシーを管理することができます。 このポリシーを使用する際の考慮事項は次のとおりです。
 
 なるほど。
 
@@ -97,12 +84,7 @@ https://learn.microsoft.com/ja-jp/windows/client-management/mdm/policy-csp-local
 
 ## おまけ
 
-![天野](/images/aadj-local-admin/image-03.jpg)
-
-天野
-
 ローカル管理者権限をユーザーに付与したくないんだけど
-
 このパターンよくあると思います。
 
 この場合はWindows Autopilotを利用するのが吉だと思ってます。
@@ -110,10 +92,6 @@ https://learn.microsoft.com/ja-jp/windows/client-management/mdm/policy-csp-local
 ![](/images/aadj-local-admin/image-04.png)
 
 ## おまけ2
-
-![天野](/images/aadj-local-admin/image-03.jpg)
-
-天野
 
 ローカルユーザー/ローカル管理者のパスワードをセキュアに管理したいんだけど
 

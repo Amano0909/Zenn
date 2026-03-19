@@ -3,7 +3,7 @@ title: "Geminiのプライバシー・アクセス権周りについてメモっ
 emoji: "📝"
 type: "tech"
 topics: ["technology"]
-published: false
+published: true
 ---
 
 https://twitter.com/AmanoH0909/status/1886023933461434470
@@ -18,19 +18,7 @@ https://support.google.com/a/answer/15706919?hl=ja
 
 ### そもそもここでいっているGeminiとは？
 
-> - この Google Workspace の生成 AI に関するプライバシー ハブでは、
->
->   **Gemini for Workspace**
->
->   （Gmail の文書作成サポート、Workspace のサイドパネルなど）と、ウェブ（gemini.google.com など）とモバイル（Android、iOS）の
->
->   **Gemini アプリ**
->
->   について説明します。このプライバシー ハブでは、両方のプロダクトを単に
->
->   **Gemini**
->
->   と呼びます。
+> - この Google Workspace の生成 AI に関するプライバシー ハブでは、**Gemini for Workspace**（Gmail の文書作成サポート、Workspace のサイドパネルなど）と、ウェブ（gemini.google.com など）とモバイル（Android、iOS）の**Gemini アプリ**について説明します。このプライバシー ハブでは、両方のプロダクトを単に**Gemini**と呼びます。
 
 - 下記の２つのことについていっている
   - **Gemini for Workspace**
@@ -39,73 +27,26 @@ https://support.google.com/a/answer/15706919?hl=ja
 
 ### データは学習に利用される？
 
-> - **Gemini とのやり取りが組織外に開示されることはありません**
->
->   。Gemini は、お客様の許可なくコンテンツを組織外に共有することはありません。
->
-> - **お客様のコンテンツが他のお客様のために使用されることはありません。**
->
->   お客様のコンテンツは、人間によってレビューされることも、許可なくお客様のドメイン外で生成 AI モデルのトレーニングに使用されることもありません。
->
-> - いいえ。ユーザー プロンプトは、
->
->   [Cloud のデータ処理に関する追加条項](https://cloud.google.com/terms/data-processing-addendum)
->
->   に基づき、顧客データと見なされます。Workspace は、お客様からの事前の許可や指示がない限り、モデルのトレーニングに顧客データを使用することはありません。このコミットメントの概要は、
->
->   [Google Workspace サービス固有の利用規約](https://workspace.google.com/terms/service-terms/)
->
->   の「トレーニングの制限」セクションに記載されています。
+> - **Gemini とのやり取りが組織外に開示されることはありません**。Gemini は、お客様の許可なくコンテンツを組織外に共有することはありません。
+> - お客様のコンテンツが他のお客様のために使用されることはありません。お客様のコンテンツは、人間によってレビューされることも、許可なくお客様のドメイン外で生成 AI モデルのトレーニングに使用されることもありません。
+> - いいえ。ユーザー プロンプトは、[Cloud のデータ処理に関する追加条項](https://cloud.google.com/terms/data-processing-addendum)に基づき、顧客データと見なされます。Workspace は、お客様からの事前の許可や指示がない限り、モデルのトレーニングに顧客データを使用することはありません。このコミットメントの概要は、[Google Workspace サービス固有の利用規約](https://workspace.google.com/terms/service-terms/)の「トレーニングの制限」セクションに記載されています。
 
 - 生成AIのトレーニングに利用されることはない。つまり、機密情報をプロンプトに打ち込んでも学習による漏洩の可能性はない
 - Geminiを利用してからといって勝手に情報が外部に共有されることはない
 
 ### プロンプトの保存期間は？
 
-> - **Gemini for Workspace**
->
->   では、プロンプトや回答は保存されません。ユーザーが Gemini for Workspace の操作時に入力したプロンプトは、そのユーザー セッションのコンテキスト以外では使用されません。
->
->   [The life of a prompt: Demystifying Gemini（プロンプトのライフ: Gemini を解き明かす）](https://workspace.google.com/blog/ai-and-machine-learning/life-prompt-demystifying-gemini)
->
->   で説明されているように、Gemini セッションが終了するとデータは消去されます。
->
-> - **Gemini アプリ**
->
->   では、Gemini アプリ アクティビティ（プロンプトや回答など）が
->
->   [Gemini アプリ アクティビティ](https://myactivity.google.com/product/gemini?utm_source=help)
->
->   に最大 18 か月間保存されます。チャットとアップロードされたファイルが人間のレビュアーによって確認されることはなく、生成 AI モデルのトレーニングにも使用されません。管理者は、組織の Gemini アプリへのアクセスを
->
->   [オンまたはオフ](https://support.google.com/a/answer/14571493?visit_id=638719596767444413-3024814626&fl=1&sjid=3298958633045450898-NA)
->
->   に切り替えることができます。また、Gemini アプリ アクティビティの時間を管理できるようになる機能が近日リリース予定です。このページで最新情報を随時ご確認ください。
+> - **Gemini for Workspace**では、プロンプトや回答は保存されません。ユーザーが Gemini for Workspace の操作時に入力したプロンプトは、そのユーザー セッションのコンテキスト以外では使用されません。[The life of a prompt: Demystifying Gemini（プロンプトのライフ: Gemini を解き明かす）](https://workspace.google.com/blog/ai-and-machine-learning/life-prompt-demystifying-gemini)で説明されているように、Gemini セッションが終了するとデータは消去されます。
+> - **Gemini アプリ**では、Gemini アプリ アクティビティ（プロンプトや回答など）が[Gemini アプリ アクティビティ](https://myactivity.google.com/product/gemini?utm_source=help)に最大 18 か月間保存されます。チャットとアップロードされたファイルが人間のレビュアーによって確認されることはなく、生成 AI モデルのトレーニングにも使用されません。管理者は、組織の Gemini アプリへのアクセスを[オンまたはオフ](https://support.google.com/a/answer/14571493?visit_id=638719596767444413-3024814626&fl=1&sjid=3298958633045450898-NA)に切り替えることができます。また、Gemini アプリ アクティビティの時間を管理できるようになる機能が近日リリース予定です。このページで最新情報を随時ご確認ください。
 
-- **Gemini for Workspace**
-
-  はセッションがつながっている間のみ
-- **Gemini アプリ**
-
-  はMax18ヶ月
+- **Gemini for Workspace**はセッションがつながっている間のみ
+- **Gemini アプリ**はMax18ヶ月
 
 ### Genemiが利用できるデータの範囲は？勝手にGoogle Driveの給与情報見られない？
 
-> - Gemini の厳格なデータアクセス制御モデルでは、入力やセッション コンテンツがユーザーの境界を越えて漏洩することはありません。このモデルは、セッションのデータをその個々のユーザーにのみ提示するように構成されています。そのため、情報は組織の外部に出ないように非公開に保たれるだけでなく、組織内のユーザー間でも、Workspace に組み込まれている共有ファイルに対するアクセス制御に従って非公開に保たれます。
+> - Gemini の厳格なデータアクセス制御モデルでは、入力やセッション コンテンツがユーザーの境界を越えて漏洩することはありません。このモデルは、セッションのデータをその個々のユーザーにのみ提示するように構成されています。そのため、情報は組織の外部に出ないように非公開に保たれるだけでなく、組織内のユーザー間でも、Workspace に組み込まれている共有ファイルに対するアクセス制御に従って非公開に保たれます。[クライアントサイド暗号化](https://support.google.com/a/answer/10741897)（CSE）を利用すると、Gemini による機密データへのアクセスを制限できます。Google システムや Google 社員には CSE コンテンツにアクセスするための技術的な方法がないため、CSE を活用して同じ目的を達成できます。
 >
->   [クライアントサイド暗号化](https://support.google.com/a/answer/10741897)
->
->   （CSE）を利用すると、Gemini による機密データへのアクセスを制限できます。Google システムや Google 社員には CSE コンテンツにアクセスするための技術的な方法がないため、CSE を活用して同じ目的を達成できます。
->
-> - Gemini は、プロンプトやグラウンドとなる回答のコンテキストを特定する目的で、Gemini for Workspace を利用しているユーザーがアクセス可能な Workspace 内の関連コンテンツを取得します。そのユーザーがアクセスできないドキュメントやメールのコンテンツは取得しません。
->
->   [Information Rights Management](https://support.google.com/a/answer/9656855?#irmfaq)
->
->   （ダウンロード、コピー、印刷の無効化）や
->
->   [クライアントサイド暗号化](https://support.google.com/a/answer/10741897)
->
->   などのコンテンツ制限を使用して、Gemini による機密データへのアクセスを制限することもできます。
+> - Gemini は、プロンプトやグラウンドとなる回答のコンテキストを特定する目的で、Gemini for Workspace を利用しているユーザーがアクセス可能な Workspace 内の関連コンテンツを取得します。そのユーザーがアクセスできないドキュメントやメールのコンテンツは取得しません。[Information Rights Management](https://support.google.com/a/answer/9656855?#irmfaq)（ダウンロード、コピー、印刷の無効化）や [クライアントサイド暗号化](https://support.google.com/a/answer/10741897)などのコンテンツ制限を使用して、Gemini による機密データへのアクセスを制限することもできます。
 
 - Geminiを利用した範囲のアクセス権はGeminiを利用しているユーザーに依存する
 - つまりGoogle Driveなどのアクセス権を適切に行っていれば問題はない

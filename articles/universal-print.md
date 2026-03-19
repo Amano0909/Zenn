@@ -3,7 +3,7 @@ title: "Universal Printはまだ辛そうだって話"
 emoji: "📝"
 type: "tech"
 topics: ["technology", "universalprint"]
-published: false
+published: true
 ---
 
 会社で管理している複合機・プリンターの数が多くなってきて辛いので対策方法を考える。

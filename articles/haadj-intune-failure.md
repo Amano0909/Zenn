@@ -3,11 +3,10 @@ title: "[Azure AD][Hybrid Azure AD Join][Intune]HAADJ時にIntuneにうまく登
 emoji: "📝"
 type: "tech"
 topics: ["azuread", "haadj", "intune", "technology"]
-published: false
+published: true
 ---
 
 HAADJ＆Intune登録についててきとうに書く
-
 全台Intuneへ登録するのだいぶ辛い
 
 ## とりあえず、チェックするポイント
@@ -58,8 +57,6 @@ dsregcmd /status
 タスクスケジューラ周りを疑ってください。
 
 あとそもそも端末を利用しているのか。
-
-https://amano-yuruyuru.com/task_scheduler-no_startup
 
 ## トラブルシューティングについて
 

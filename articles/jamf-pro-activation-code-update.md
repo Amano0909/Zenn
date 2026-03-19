@@ -3,11 +3,10 @@ title: "[Jamf]Jamf Proのアクティベーションコードを更新する"
 emoji: "📝"
 type: "tech"
 topics: ["jamfpro", "technology"]
-published: false
+published: true
 ---
 
 お疲れ様です。
-
 今回はJamf Proのアクティベーションコードの更新方法についてまとめます。
 
 更新方法は非常に簡単なんですけど、久しぶりに行うと忘れちゃうので備忘録的な意味で
@@ -16,9 +15,7 @@ published: false
 
 Jamf ACCOUNTにログインします。
 
-Jamf ProじゃなくてJamf
-
-ACCOUNTですね。
+Jamf ProじゃなくてJamfACCOUNTですね。
 
 左側の製品をクリックして「Jamf Pro」の表示をクリックします
 
@@ -36,15 +33,9 @@ ACCOUNTですね。
 
 そしてたら右下の編集を押して、アクティベーションコードを新しい物に更新してください。
 
-保存した後、「
-
-購入済みのコンピューターライセンス総数
-
-」が増えていれば成功です。
+保存した後、「購入済みのコンピューターライセンス総数」が増えていれば成功です。
 ※ライセンス数を更新時に増やしていない場合は変化ないと思います。
 
 ![](/images/jamf-pro-activation-code-update/image-04.png)
 
 以上ですね。
-
-非常に簡単('◇')ゞ

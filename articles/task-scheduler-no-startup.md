@@ -3,11 +3,10 @@ title: "タスクスケジューラが起動できない問題について"
 emoji: "📝"
 type: "tech"
 topics: ["taskscheduler", "technology"]
-published: false
+published: true
 ---
 
 お疲れ様です！
-
 今回はHAADJ(Hybrid Azure AD Join)展開中に起きた問題についてまとめようと思います。
 
 HAADJなんじゃそりゃという方は最初の方はすっ飛ばしてください。
@@ -18,11 +17,7 @@ HAADJなんじゃそりゃという方は最初の方はすっ飛ばしてくだ
 
 そこで該当の端末を調べてみたところなんとタスクスケジューラが起動できない状態だったのです。
 
-エラー内容は「
-
-リモートコンピューターが見つかりませんでした
-
-」というメッセージでした。
+エラー内容は「リモートコンピューターが見つかりませんでした」というメッセージでした。
 
 ![](/images/task-scheduler-no-startup/image-01.png)
 
@@ -40,9 +35,7 @@ https://jpazureid.github.io/blog/azure-active-directory/troubleshoot-hybrid-azur
 
 ## 試したこと
 
-https://matarin1725.com/archives/19840463.html
-
-上記の記事を参考にやれることはやってみましたが、うまくいかず。。
+インターネットで同じ症状を見つけ、記事を参考にやれることはやってみましたが、うまくいかず。。
 
 ### 原因を見つける
 
@@ -107,7 +100,6 @@ https://matarin1725.com/archives/19840463.html
 ## まとめ
 
 今回はタスクスケジューラが起動できない問題についてまとめました。
-
 企業で利用しているPCならADのGPOかIntuneで設定してもいいかなとは思いました。
 
 それでは、最後までお読みいただきありがとうございました。
