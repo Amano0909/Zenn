@@ -39,10 +39,19 @@
 ## 本ルール
 
 - 本ごとに `books/<book-slug>/config.yaml` を持つ
+- `book-slug` は 12〜50 文字にする
+- `book-slug` には半角英小文字、数字、ハイフン、アンダースコアのみを使う
 - `config.yaml` には少なくとも `title`、`summary`、`topics`、`published`、`price`、`chapters` を持たせる
 - `chapters` に書いた名前と章ファイル名を一致させる
+- `chapters` に指定されていない章ファイルは同期されない前提で扱う
 - 章ファイルは Markdown で作る
+- 章ファイル先頭には Front Matter を必ず書く
+- 章ファイルの Front Matter には少なくとも `title` を書く
+- 章本文は Front Matter の下に書く
+- 章ファイル名は `a-z0-9`、ハイフン、アンダースコアの 1〜50 文字にする
 - 無料本は `price: 0` を使う
+- カバー画像を置く場合は `cover.png` または `cover.jpeg` を使う
+- カバー画像の縦横比は 1:1.4 を推奨し、最終的に幅500px・高さ700pxで見える前提で用意する
 
 ## Markdown ルール
 
@@ -77,6 +86,7 @@
 - 既存構造を壊す変更をする前に、Zenn CLI 互換性を確認する
 - `drafts/` は下書き原稿用として利用してよい
 - `drafts/` 内の原稿をそのまま Zenn 公開物として扱わない
+- `drafts/` から本へ変換する場合も、章ファイルには本用 Front Matter を補う
 - `articles/` と `books/` 以外に本文管理用の独自階層を勝手に増やさない
 
 ## 推奨チェック
@@ -90,7 +100,10 @@
 - `topics` にスペースや記号が入っていないか
 - `topics` にハイフンが入っていないか
 - `published` の値が意図どおりか
+- 本の slug が 12〜50 文字か
 - 本の `chapters` と実ファイルにズレがないか
+- 本の各章ファイルに Front Matter と `title` があるか
+- 本のカバー画像がある場合は `cover.png` または `cover.jpeg` で、比率が 1:1.4 に近いか
 - 見出し階層が不自然でないか
 - 画像の Alt テキストとサイズ指定が適切か
 - Zenn 独自記法へ置き換えられる箇所が残っていないか

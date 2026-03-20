@@ -1,0 +1,14 @@
+title: "PM実務メモ"
+summary: "PJキックオフから終結までの実務メモを、下書き原稿ベースでまとめた無料本です。"
+topics:
+  - pm
+  - project
+  - scrum
+published: false
+price: 0
+chapters:
+  - project-kickoff
+  - team-building
+  - sprint-review
+  - project-end
+  - lessons-learned
