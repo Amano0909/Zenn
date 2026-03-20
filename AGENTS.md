@@ -1,4 +1,4 @@
-﻿# AGENTS.md
+# AGENTS.md
 
 このリポジトリは Zenn CLI で記事と本を管理する。作業時は以下のルールを優先する。
 
@@ -10,14 +10,16 @@
 - Zenn CLI が前提とする構造と命名を崩さない
 - Zenn の Markdown 記法に沿って執筆する
 
-## 最重要ルール
+## フォルダ運用
 
 - `drafts/` は変換前の下書き置き場として使う
+- `drafts/` 内の原稿をそのまま Zenn 公開物として扱わない
 - 記事ファイルは `articles/<slug>.md` に置く
 - 本は `books/<book-slug>/` ディレクトリ単位で管理する
 - 本の設定は `books/<book-slug>/config.yaml` に置く
 - 本の章ファイルは `books/<book-slug>/` 配下に置く
 - 本の章順は `config.yaml` の `chapters` で管理する
+- `articles/` と `books/` 以外に本文管理用の独自階層を勝手に増やさない
 - Zenn CLI の想定外の階層変更はしない
 
 ## 記事ルール
@@ -25,16 +27,15 @@
 - 記事ファイル先頭には Front Matter を必ず書く
 - `title`、`emoji`、`type`、`topics`、`published` を明示する
 - `title` は 70 文字以内に収める
-- `topics` は 18 文字以内に収める
-- `topics` は半角英小文字と数字のみを使う
-- `topics` にスペースや記号は使わない
-- `topics` にハイフンも使わない
-- `C++` は `cpp`、`C#` は `csharp` のように置き換える
 - `type` は `tech` または `idea`
 - `published: false` は下書き、`published: true` は公開対象
 - slug は 12〜50 文字
 - slug には半角英小文字、数字、ハイフンのみを使う
 - slug に日本語、大文字、スペース、アンダースコアは使わない
+- `topics` は 18 文字以内に収める
+- `topics` は半角英小文字と数字のみを使う
+- `topics` にスペース、記号、ハイフンは使わない
+- `C++` は `cpp`、`C#` は `csharp` のように置き換える
 
 ## 本ルール
 
@@ -68,7 +69,7 @@
 - URL 単独行による埋め込みを使える
 - 公開されないメモには単一行の HTML コメントを使う
 
-## WordPress からの移行時ルール
+## WordPress 移行ルール
 
 - WordPress 独自ショートコードはそのまま残さない
 - 生の HTML は必要最小限にし、Zenn 標準 Markdown や独自記法へ寄せる
@@ -77,6 +78,7 @@
 - 画像は移行後も参照切れしない URL を使う
 - 大きすぎる画像は圧縮または幅指定を検討する
 - 内部リンクは WordPress ドメイン依存のまま放置しない
+- `drafts/` から本へ変換する場合も、章ファイルには本用 Front Matter を補う
 
 ## 作業ルール
 
@@ -84,21 +86,16 @@
 - 新規本は原則 `npx zenn new:book` を使って作成する
 - 執筆や確認時は `npx zenn preview` を使う
 - 既存構造を壊す変更をする前に、Zenn CLI 互換性を確認する
-- `drafts/` は下書き原稿用として利用してよい
-- `drafts/` 内の原稿をそのまま Zenn 公開物として扱わない
-- `drafts/` から本へ変換する場合も、章ファイルには本用 Front Matter を補う
-- `articles/` と `books/` 以外に本文管理用の独自階層を勝手に増やさない
 
-## 推奨チェック
+## 公開前チェック
 
 - `drafts/` と `articles/` の役割が混ざっていないか
 - ファイル配置が Zenn CLI の標準構造に沿っているか
-- slug が命名ルールを満たしているか
 - Front Matter または `config.yaml` の必須項目が揃っているか
 - 記事タイトルが 70 文字以内か
+- 記事 slug が命名ルールを満たしているか
 - `topics` が 18 文字以内か
-- `topics` にスペースや記号が入っていないか
-- `topics` にハイフンが入っていないか
+- `topics` にスペース、記号、ハイフンが入っていないか
 - `published` の値が意図どおりか
 - 本の slug が 12〜50 文字か
 - 本の `chapters` と実ファイルにズレがないか
