@@ -1,6 +1,6 @@
-﻿# Zenn Blog Repository
+# Zenn Blog Repository
 
-このリポジトリは、Zenn に公開する技術ブログ記事と本を管理するためのものです。
+このリポジトリは、Zenn に公開する技術ブログ記事と本を管理するためのものです。`drafts/` で下書きを作り、整えた内容を `articles/` や `books/` に反映する運用を前提にしています。
 
 ## 目的
 
@@ -20,14 +20,14 @@ npx zenn new:book
 
 ## 主な構成
 
-- `articles/`
-  - Zenn の記事を置く
-- `books/`
-  - Zenn の本を置く
 - `drafts/`
   - Zenn 変換前の下書き Markdown を置く
+- `articles/`
+  - Zenn の公開用記事を置く
+- `books/`
+  - Zenn の本を置く
 
 ## 補足
 
-詳しい運用メモは [ZENN_CLI_GUIDE.md](./ZENN_CLI_GUIDE.md) に整理しています。  
-このリポジトリで守るべき Zenn CLI のルールは [AGENTS.md](./AGENTS.md) を参照してください。
+- 詳しい運用メモは [ZENN_CLI_GUIDE.md](./ZENN_CLI_GUIDE.md) を参照
+- このリポジトリで守るべきルールは [AGENTS.md](./AGENTS.md) を参照
