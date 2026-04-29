@@ -1,0 +1,3 @@
+display_name: Zenn Amano Article Editor
+short_description: 天野さんらしい文体を保ってZenn記事を整える
+default_prompt: Zenn用の記事ドラフトを、天野さんらしい文体を保ちながら誤字・技術内容・Zenn形式の観点で整えてください。

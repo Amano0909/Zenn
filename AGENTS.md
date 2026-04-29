@@ -7,6 +7,7 @@
 - `drafts/` に Zenn 変換前の下書き原稿を置く
 - `articles/` に Zenn 記事を置く
 - `books/` に Zenn の本を置く
+- `skills/` にこのリポジトリ用の Codex スキルを置く
 - Zenn CLI が前提とする構造と命名を崩さない
 - Zenn の Markdown 記法に沿って執筆する
 
@@ -19,6 +20,8 @@
 - 本の設定は `books/<book-slug>/config.yaml` に置く
 - 本の章ファイルは `books/<book-slug>/` 配下に置く
 - 本の章順は `config.yaml` の `chapters` で管理する
+- `skills/` は Codex 用スキルの管理場所であり、Zenn の公開コンテンツではない
+- `skills/` 配下のファイルを Zenn 記事や本として扱わない
 - `articles/` と `books/` 以外に本文管理用の独自階層を勝手に増やさない
 - Zenn CLI の想定外の階層変更はしない
 

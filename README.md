@@ -26,6 +26,9 @@ npx zenn new:book
   - Zenn の公開用記事を置く
 - `books/`
   - Zenn の本を置く
+- `skills/`
+  - このリポジトリ用の Codex スキルを置く
+  - Zenn の公開コンテンツではない
 
 ## 補足
 

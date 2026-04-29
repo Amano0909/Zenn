@@ -44,6 +44,8 @@ npx zenn new:book
 │     ├─ cover.png
 │     ├─ <chapter1>.md
 │     └─ <chapter2>.md
+├─ skills/
+│  └─ <skill-name>/
 ├─ package.json
 └─ README.md
 ```
@@ -56,6 +58,9 @@ npx zenn new:book
   - 本ごとのディレクトリを置く
 - `books/<book-slug>/config.yaml`
   - 本のタイトル、概要、公開設定などを管理する
+- `skills/`
+  - このリポジトリ用の Codex スキルを管理する
+  - Zenn CLI の公開対象ではない
 
 ## 記事の作り方
 
