@@ -67,8 +67,8 @@ GitHubで管理できるのもいいし、無料だし。
 
 参考にした記事。
 
-- [Cloudflare PagesでAstroをデプロイする](https://izanami.dev/post/b0f59b2e-dd6b-4352-af1d-ae14f7cec707)
-- [さようならWordPress。AstroとNotionで年間費用を削減した話](https://blog.cloudnative.co.jp/articles/goodbye-wordpress-astro-notion-cost-reduction/)
+- [個人開発に役立つ Cloudflare Pages 無料枠でHPコストゼロ運用](https://izanami.dev/post/b0f59b2e-dd6b-4352-af1d-ae14f7cec707)
+- [グッバイWordPress、ブログサイトをAstro + Notion に完全移行でコスト90%オフ](https://blog.cloudnative.co.jp/articles/goodbye-wordpress-astro-notion-cost-reduction/)
 
 フレームワークはAstroを利用した。
 
